@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,12 +11,11 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial,sans-serif;
+    font-family:Arial, sans-serif;
 }
 
 body{
-    background:#f4f4f4;
-    overflow:hidden;
+    background:#f5f5f5;
 }
 
 .header{
@@ -24,7 +24,7 @@ body{
     left:0;
     width:100%;
     background:#2E7D32;
-    padding:10px;
+    padding:12px;
     display:flex;
     justify-content:center;
     gap:15px;
@@ -36,24 +36,22 @@ body{
 }
 
 .btn{
-    background:#ffffff;
+    background:#fff;
     color:#2E7D32;
     border:none;
     padding:10px 18px;
-    border-radius:30px;
+    border-radius:25px;
     font-size:16px;
     font-weight:bold;
     cursor:pointer;
-    transition:0.3s;
 }
 
 .btn:hover{
-    transform:scale(1.05);
+    opacity:0.9;
 }
 
 .viewer{
     margin-top:60px;
-    width:100%;
     height:calc(100vh - 60px);
 }
 
@@ -63,7 +61,6 @@ iframe{
     border:none;
 }
 </style>
-
 </head>
 
 <body>
@@ -74,6 +71,7 @@ iframe{
 <button class="btn">🌐 Our Website</button>
 </a>
 
+<!-- Replace YOUR_GOOGLE_REVIEW_LINK with your actual Google Review link -->
 <a href="YOUR_GOOGLE_REVIEW_LINK" target="_blank">
 <button class="btn">⭐ Google Review</button>
 </a>
@@ -81,8 +79,10 @@ iframe{
 </div>
 
 <div class="viewer">
-<iframe src="Groundnut%20oil.pdf#toolbar=0&navpanes=0&scrollbar=0"></iframe>
+    <!-- Rename your PDF file to: groundnut-oil.pdf -->
+    <iframe src="groundnut-oil.pdf#toolbar=0&navpanes=0"></iframe>
 </div>
 
 </body>
 </html>
+```
