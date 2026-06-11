@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,10 +7,12 @@
 <title>Aroga Foods</title>
 
 <style>
-body{
+html,body{
     margin:0;
-    font-family:Arial, sans-serif;
-    background:#f5f5f5;
+    padding:0;
+    width:100%;
+    height:100%;
+    font-family:Arial,Helvetica,sans-serif;
 }
 
 .header{
@@ -17,29 +20,35 @@ body{
     top:0;
     left:0;
     width:100%;
+    height:60px;
     background:#2E7D32;
-    padding:10px;
-    text-align:center;
-    z-index:999;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:15px;
+    z-index:1000;
 }
 
-.btn{
-    display:inline-block;
+.button{
     background:#ffffff;
     color:#2E7D32;
     text-decoration:none;
-    padding:10px 18px;
-    margin:5px;
-    border-radius:25px;
+    padding:10px 20px;
+    border-radius:30px;
     font-weight:bold;
 }
 
-.viewer{
-    margin-top:65px;
-    height:calc(100vh - 65px);
+.button:hover{
+    background:#eeeeee;
 }
 
-iframe{
+.pdf{
+    margin-top:60px;
+    width:100%;
+    height:calc(100vh - 60px);
+}
+
+.pdf iframe{
     width:100%;
     height:100%;
     border:none;
@@ -50,19 +59,21 @@ iframe{
 <body>
 
 <div class="header">
-    <a class="btn" href="https://www.arogafoods.co.in/" target="_blank">
-        🌐 Our Website
-    </a>
 
-    <!-- Replace this with your actual Google Review link -->
-    <a class="btn" href="https://g.page/r/" target="_blank">
-        ⭐ Google Review
-    </a>
+<a class="button" href="https://www.arogafoods.co.in/" target="_blank">
+🌐 Our Website
+</a>
+
+<a class="button" href="https://www.google.com/search?q=Aroga+Foods" target="_blank">
+⭐ Google Review
+</a>
+
 </div>
 
-<div class="viewer">
-    <iframe src="groundnut-oil.pdf"></iframe>
+<div class="pdf">
+<iframe src="Groundnut%20oil%20.pdf"></iframe>
 </div>
 
 </body>
 </html>
+```
