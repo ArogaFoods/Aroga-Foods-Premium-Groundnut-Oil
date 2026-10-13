@@ -3545,7 +3545,104 @@ footer a:hover {
     .aroga-hero-logo { width: min(78%, 320px); }
 }
 
-</style></head>
+</style><style>
+/* AROGA FOODS — Burgundy & Groundnut Oil Drop Finish */
+:root {
+  --groundnut-cream: #F4EFEA;
+  --groundnut-ivory: #F4EFEA;
+  --groundnut-purple: #4A1425;
+  --groundnut-purple-light: #F4EFEA;
+  --groundnut-gold: #C19245;
+  --groundnut-gold-light: #E6C783;
+  --groundnut-green: #59704A;
+  --groundnut-green-dark: #3C4D32;
+  --groundnut-green-soft: #59704A;
+  --groundnut-text: #443631;
+  --aroga-burgundy: #4A1425;
+  --aroga-terracotta: #A0523C;
+}
+body { background: var(--groundnut-ivory); }
+.navbar { background: rgba(244,239,234,.97) !important; }
+.nav-links a:hover, .section-title small { color: var(--aroga-burgundy) !important; }
+.hero {
+  background: radial-gradient(circle at 78% 30%, rgba(193,146,69,.18), transparent 31%),
+              linear-gradient(135deg, #F4EFEA, #F4EFEA) !important;
+}
+.hero h1, .section-title h2, .info-box h3, .guide-card h3 { color: var(--aroga-burgundy) !important; }
+.hero h1 span { color: var(--aroga-terracotta) !important; }
+.badge, .process-icon, .benefit-card .icon, .guide-icon {
+  background: #F4EFEA !important;
+  color: var(--aroga-burgundy) !important;
+  border-color: rgba(74,20,37,.2) !important;
+}
+.process, .customer-guide { background: #F4EFEA !important; }
+.benefits, .info { background: #F4EFEA !important; }
+.process-card, .benefit-card, .guide-card, .info-box { border-color: rgba(74,20,37,.13) !important; }
+.wood-section {
+  background: radial-gradient(circle at 15% 15%, rgba(255,255,255,.22), transparent 28%),
+              radial-gradient(circle at 88% 82%, rgba(193,146,69,.22), transparent 30%),
+              linear-gradient(135deg, #4A1425 0%, #642137 56%, #59704A 100%) !important;
+}
+.cta { background: linear-gradient(135deg, #4A1425, #642137) !important; }
+.aroga-website-link, .btn-primary { background: #4A1425 !important; }
+.aroga-website-link:hover, .btn-primary:hover { background: #A0523C !important; }
+.nutrition-table td:last-child { color: #59704A !important; }
+
+/* Decorative golden oil drop falling toward the groundnuts */
+.coconut-stage { isolation: isolate; }
+.coconut-stage::before {
+  content: "";
+  position: absolute;
+  z-index: 5;
+  top: 7%;
+  left: 54%;
+  width: 20px;
+  height: 29px;
+  border-radius: 70% 30% 65% 35% / 70% 35% 65% 30%;
+  transform: rotate(42deg);
+  background: radial-gradient(circle at 30% 25%, #FFF0B8 0 8%, #E5B64E 34%, #A96816 100%);
+  box-shadow: 0 3px 12px rgba(161,100,20,.28);
+  animation: groundnutOilDrop 2.1s ease-in infinite;
+  pointer-events: none;
+}
+.coconut-stage::after {
+  content: "";
+  position: absolute;
+  z-index: 4;
+  top: 42%;
+  left: 52%;
+  width: 38px;
+  height: 10px;
+  border: 2px solid rgba(193,146,69,.8);
+  border-top-color: transparent;
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(.45);
+  animation: groundnutOilRipple 2.1s ease-out infinite;
+  pointer-events: none;
+}
+@keyframes groundnutOilDrop {
+  0% { top: 7%; opacity: 0; transform: translateY(-8px) rotate(42deg) scale(.7); }
+  12% { opacity: 1; }
+  72% { opacity: 1; }
+  88% { top: 40%; opacity: .9; transform: translateY(0) rotate(42deg) scale(1); }
+  100% { top: 43%; opacity: 0; transform: translateY(5px) rotate(42deg) scale(.45); }
+}
+@keyframes groundnutOilRipple {
+  0%, 76% { opacity: 0; transform: scale(.35); }
+  88% { opacity: .85; transform: scale(.8); }
+  100% { opacity: 0; transform: scale(1.4); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .coconut-stage::before, .coconut-stage::after { animation: none; }
+}
+@media (max-width: 700px) {
+  .coconut-stage::before { left: 57%; width: 16px; height: 23px; }
+  .coconut-stage::after { left: 54%; }
+}
+</style>
+
+</head>
 <body>
 <!-- =====================================================
      NAVIGATION
@@ -4035,99 +4132,3 @@ waForm?.addEventListener("submit", event => {
 </script>
 </body>
 </html>
-<style>
-/* AROGA FOODS — Burgundy & Groundnut Oil Drop Finish */
-:root {
-  --groundnut-cream: #F4EFEA;
-  --groundnut-ivory: #F4EFEA;
-  --groundnut-purple: #4A1425;
-  --groundnut-purple-light: #F4EFEA;
-  --groundnut-gold: #C19245;
-  --groundnut-gold-light: #E6C783;
-  --groundnut-green: #59704A;
-  --groundnut-green-dark: #3C4D32;
-  --groundnut-green-soft: #59704A;
-  --groundnut-text: #443631;
-  --aroga-burgundy: #4A1425;
-  --aroga-terracotta: #A0523C;
-}
-body { background: var(--groundnut-ivory); }
-.navbar { background: rgba(244,239,234,.97) !important; }
-.nav-links a:hover, .section-title small { color: var(--aroga-burgundy) !important; }
-.hero {
-  background: radial-gradient(circle at 78% 30%, rgba(193,146,69,.18), transparent 31%),
-              linear-gradient(135deg, #F4EFEA, #F4EFEA) !important;
-}
-.hero h1, .section-title h2, .info-box h3, .guide-card h3 { color: var(--aroga-burgundy) !important; }
-.hero h1 span { color: var(--aroga-terracotta) !important; }
-.badge, .process-icon, .benefit-card .icon, .guide-icon {
-  background: #F4EFEA !important;
-  color: var(--aroga-burgundy) !important;
-  border-color: rgba(74,20,37,.2) !important;
-}
-.process, .customer-guide { background: #F4EFEA !important; }
-.benefits, .info { background: #F4EFEA !important; }
-.process-card, .benefit-card, .guide-card, .info-box { border-color: rgba(74,20,37,.13) !important; }
-.wood-section {
-  background: radial-gradient(circle at 15% 15%, rgba(255,255,255,.22), transparent 28%),
-              radial-gradient(circle at 88% 82%, rgba(193,146,69,.22), transparent 30%),
-              linear-gradient(135deg, #4A1425 0%, #642137 56%, #59704A 100%) !important;
-}
-.cta { background: linear-gradient(135deg, #4A1425, #642137) !important; }
-.aroga-website-link, .btn-primary { background: #4A1425 !important; }
-.aroga-website-link:hover, .btn-primary:hover { background: #A0523C !important; }
-.nutrition-table td:last-child { color: #59704A !important; }
-
-/* Decorative golden oil drop falling toward the groundnuts */
-.coconut-stage { isolation: isolate; }
-.coconut-stage::before {
-  content: "";
-  position: absolute;
-  z-index: 5;
-  top: 7%;
-  left: 54%;
-  width: 20px;
-  height: 29px;
-  border-radius: 70% 30% 65% 35% / 70% 35% 65% 30%;
-  transform: rotate(42deg);
-  background: radial-gradient(circle at 30% 25%, #FFF0B8 0 8%, #E5B64E 34%, #A96816 100%);
-  box-shadow: 0 3px 12px rgba(161,100,20,.28);
-  animation: groundnutOilDrop 2.1s ease-in infinite;
-  pointer-events: none;
-}
-.coconut-stage::after {
-  content: "";
-  position: absolute;
-  z-index: 4;
-  top: 42%;
-  left: 52%;
-  width: 38px;
-  height: 10px;
-  border: 2px solid rgba(193,146,69,.8);
-  border-top-color: transparent;
-  border-radius: 50%;
-  opacity: 0;
-  transform: scale(.45);
-  animation: groundnutOilRipple 2.1s ease-out infinite;
-  pointer-events: none;
-}
-@keyframes groundnutOilDrop {
-  0% { top: 7%; opacity: 0; transform: translateY(-8px) rotate(42deg) scale(.7); }
-  12% { opacity: 1; }
-  72% { opacity: 1; }
-  88% { top: 40%; opacity: .9; transform: translateY(0) rotate(42deg) scale(1); }
-  100% { top: 43%; opacity: 0; transform: translateY(5px) rotate(42deg) scale(.45); }
-}
-@keyframes groundnutOilRipple {
-  0%, 76% { opacity: 0; transform: scale(.35); }
-  88% { opacity: .85; transform: scale(.8); }
-  100% { opacity: 0; transform: scale(1.4); }
-}
-@media (prefers-reduced-motion: reduce) {
-  .coconut-stage::before, .coconut-stage::after { animation: none; }
-}
-@media (max-width: 700px) {
-  .coconut-stage::before { left: 57%; width: 16px; height: 23px; }
-  .coconut-stage::after { left: 54%; }
-}
-</style>
